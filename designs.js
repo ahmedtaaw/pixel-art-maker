@@ -1,4 +1,4 @@
-let colorPicker = "#CCC";
+let colorPicker = $("#colorPicker").val();
 let dimensions = [1, 1]
 const canvas = document.getElementById('pixel_canvas');
 
@@ -34,7 +34,7 @@ function makeGrid() {
     }
     for (let i = 1; i <= dimensions[0]; i++) {
         for (let j = 1; j <= dimensions[1]; j++) {
-            $(canvas).find('tr:nth-child(' + i + ')').append($(('<td style="background-color:' + colorPicker + '"></td>')));
+            $(canvas).find('tr:nth-child(' + i + ')').append($(('<td></td>')));
         }
 
     }
